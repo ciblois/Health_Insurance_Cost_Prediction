@@ -1,0 +1,182 @@
+
+
+<!doctype html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Health Cost Charges Prediction</title>
+
+<style>
+            /* <!-- resets gerais -->  */
+*
+{
+box-sizing: border-box ;
+}
+
+            body{
+                padding: 0;
+                margin: 0;
+
+                background-color: whitesmoke;
+            }
+
+            #header{
+                background-color: #0174DF;
+                color: whitesmoke;
+            }
+    
+            #content{
+                margin-top: 200px;
+                display: relative;
+                max-width: 100%;
+                height: 400px;
+                margin: 0 auto;
+                background-image: url('https://cdn.shortpixel.ai/client/q_glossy,ret_img,w_810/https://blog.alliate.com.br/wp-content/uploads/2017/03/seguro-de-saude-entenda-a-importancia-desse-beneficio-para-sua-empresa-810x540.jpeg');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 800px;
+                background-color: #0174DF;
+                text-align:right;
+                color: white;
+                padding: 100px;
+            }
+
+            #footer{
+                height: auto;
+                text-align: right;
+                color: whitesmoke;
+                background-color: #0174DF;
+            }
+
+            #line2{
+                margin-top: 50px;
+                clear: both;
+                height: 20px;
+                text-align: center;
+                color: black;
+            }
+
+            a:link {
+                color: black;
+                background-color: grey;
+                text-decoration: none;
+                padding: 0px 30px;
+                word-wrap: normal;
+                display: inline-block;
+            }
+
+            a:visited {
+                color: whitesmoke;
+                background-color: transparent;
+                text-decoration: none;
+            }
+
+
+
+            a:hover {
+                color: black;
+                background-color: transparent;
+                text-decoration: underline;
+            }
+
+        </style>
+
+    </head>
+
+
+
+<body>
+
+    <div id="header">
+
+        <br><h1 style="text-align-last: center;margin-top: -10px; padding:20px;">Health Insurance - Charges Cost Prediction</h1>
+
+    </div>
+
+    <div id="content">
+
+        <form action="{{ url_for('predict')}}"method="post">
+
+            <label> Smoker </label>
+            <select name="smoker" id="smoker"> 
+
+                <option></option>
+			    <option>Yes</option>
+                <option>No</option>
+
+    		</select> <br><br>
+
+            <label> Sex </label>
+            <select name="sex" id="sex"> 
+
+                <option></option>
+			    <option>Male</option>
+                <option>Female</option>
+
+		    </select> <br><br>
+
+            <label> Region </label>
+
+            <select name="region" id="region"> 
+
+                <option></option>
+			    <option>southwest</option>
+                <option>southeast</option>
+			    <option>northwest</option>
+			    <option>northeast</option>
+
+		    </select> <br><br>
+
+            <label> Age</label>
+
+            <input type="text" name="age" id="age" required="required">
+
+            <br><br>
+
+            <label> Children </label>
+
+            <input type="text" name="children" id="children" required="required">
+
+            <br><br>
+
+            <label> BMI </label>
+
+            <input type="text" name="bmi" id="bmi" required="required">
+
+            <br><br>
+
+        <input type="submit" value="Price Prediction" required="required">
+
+        </form>
+
+        
+
+        <h2> {{result}} </h2>
+
+        <br>
+
+        <br>
+
+    </div>
+
+
+
+    <div id="line2"> 
+
+        <a href="https://github.com/ciblois/Health_Insurance_Cost_Prediction" target="_blank">GitHub Link</a> 
+
+        <a href="https://public.tableau.com/profile/cinthya.langue.blois#!/vizhome/health_insurance/Dashboard1" target="_blank">Tableau Dashboard</a> 
+
+    </div>
+
+
+
+    <div id="footer"> &copy;Cinthya Blois </div>
+
+    
+
+</body>
+
+</html>
