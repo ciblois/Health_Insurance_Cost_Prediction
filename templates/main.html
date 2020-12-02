@@ -30,17 +30,17 @@ box-sizing: border-box ;
             #content{
                 margin-top: 200px;
                 display: relative;
-                max-width: 100%;
+                max-width: 90%;
                 height: 400px;
                 margin: 0 auto;
                 background-image: url('https://cdn.shortpixel.ai/client/q_glossy,ret_img,w_810/https://blog.alliate.com.br/wp-content/uploads/2017/03/seguro-de-saude-entenda-a-importancia-desse-beneficio-para-sua-empresa-810x540.jpeg');
                 background-repeat: no-repeat;
-                background-position: center;
+                background-position: right;
                 background-size: 800px;
-                background-color: #0174DF;
-                text-align:right;
-                color: white;
-                padding: 100px;
+                background-color: #white;
+                text-align:left;
+                color: black;
+                
             }
 
             #footer{
@@ -97,6 +97,7 @@ box-sizing: border-box ;
 
     <div id="content">
 
+        <h2> Fill in all the fields below </h2>
         <form action="{{ url_for('predict')}}"method="post">
 
             <label> Smoker </label>
@@ -173,7 +174,7 @@ box-sizing: border-box ;
 
 
 
-    <div id="footer"> &copy;Cinthya Blois </div>
+    <div id="footer"> &copy;Design by Cinthya Blois </div>
 
     
 

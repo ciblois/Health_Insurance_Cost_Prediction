@@ -70,11 +70,11 @@ def predict():
             user_dict['region_southeast'] = 0
             user_dict['region_southwest'] = 1
 
-        user_dict['age'] = float(request.form['age'])
-        user_dict['bmi'] = float(request.form['bmi'])
-        user_dict['children'] = float(request.form['children'])
+        user_dict['age'] = request.form['age']
+        user_dict['bmi'] = request.form['bmi']
+        user_dict['children'] = request.form['children']
 
-        prediction = pd.DataFrame.from_dict(user_dict)
+        prediction = pd.DataFrame.from_dict(user_dict.values()).T
         price = model.predict(prediction)
 
         output = round(price[0],2)
