@@ -1,0 +1,8 @@
+env
+model.ipynb
+Readme.md
+data_cleaning.ipynb
+eda.ipynb
+insurance.csv
+.gitignore
+.git

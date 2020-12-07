@@ -78,7 +78,7 @@ def predict():
         price = model.predict(prediction)
 
         output = round(price[0],2)
-        return render_template('main.html', result = 'The predict charges is {0}'.format(output))
+        return render_template('main.html', result = 'The predicted charges is ${0}'.format(output))
 
     else:
         return render_template('main.html')
